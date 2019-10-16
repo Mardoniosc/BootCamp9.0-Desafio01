@@ -30,9 +30,9 @@ server.use((req, res, next) => {
 function checkIdExistente(req, res, next){
   const { id } = req.params;
 
-  const project =  projetos.find(p => p.id == id);
+  const projeto =  projetos.find(p => p.id == id);
 
-  if (!project) {
+  if (!projeto) {
     return res.status(400).json({ error: "Projeto não encontrado!"})
   }
   return next();
